@@ -330,7 +330,7 @@ const Contact = () => {
         <div className="bg-white rounded-lg shadow-md p-8 mt-8">
           <h2 className="text-2xl font-bold mb-6">Bản Đồ</h2>
           <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-            <img src="/image/Map.png" alt="Bản đồ MobileZone" className="w-full h-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}image/Map.png`} alt="Bản đồ MobileZone" className="w-full h-full object-cover" />
           </div>
           <p className="text-center mt-4 text-gray-600">
             <MapPin className="h-4 w-4 inline mr-2" />

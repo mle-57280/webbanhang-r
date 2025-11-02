@@ -37,10 +37,10 @@ const Home = () => {
   ];
 
   const categories = [
-    { name: 'iPhone Series', image: '/image/iPhone 15 Pro Max 256GB.jpg', products: '50+ sản phẩm' },
-    { name: 'Samsung Galaxy', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg', products: '80+ sản phẩm' },
-    { name: 'Xiaomi Redmi & Mi', image: '/image/Xiaomi 14 Pro 256GB.jpg', products: '60+ sản phẩm' },
-    { name: 'Phụ kiện', image: '/image/OPPO Reno11 Pro 256GB.png', products: '200+ sản phẩm' }
+    { name: 'iPhone Series', image: 'image/iPhone 15 Pro Max 256GB.jpg', products: '50+ sản phẩm' },
+    { name: 'Samsung Galaxy', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg', products: '80+ sản phẩm' },
+    { name: 'Xiaomi Redmi & Mi', image: 'image/Xiaomi 14 Pro 256GB.jpg', products: '60+ sản phẩm' },
+    { name: 'Phụ kiện', image: 'image/OPPO Reno11 Pro 256GB.png', products: '200+ sản phẩm' }
   ];
 
   const handleAddToCart = (product, e) => {
@@ -68,7 +68,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src="/image/Head.png" alt="MobileZone Banner" className="w-full h-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}image/Head.png`} alt="MobileZone Banner" className="w-full h-full object-cover" />
         </div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl">
@@ -120,12 +120,12 @@ const Home = () => {
                 className="card p-6 text-center hover:scale-105 transition-transform"
               >
                 <img 
-                  src={category.image} 
+                  src={`${import.meta.env.BASE_URL}${category.image}`} 
                   alt={category.name} 
                   className="w-full h-32 object-contain mb-4"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = '/image/iphone.jpg';
+                      e.target.src = `${import.meta.env.BASE_URL}image/iphone.jpg`;
                   }}
                 />
                 <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
@@ -163,12 +163,12 @@ const Home = () => {
                     -{calculateDiscount(product.price, product.oldPrice)}%
                   </div>
                   <img 
-                    src={product.image} 
+                    src={`${import.meta.env.BASE_URL}${product.image}`} 
                     alt={product.name} 
                     className="w-full h-48 object-contain"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = '/image/iphone.jpg';
+                      e.target.src = `${import.meta.env.BASE_URL}image/iphone.jpg`;
                     }}
                   />
                 </div>
@@ -283,7 +283,7 @@ const Home = () => {
                       className="w-full h-96 object-contain"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = '/image/iphone.jpg';
+                        e.target.src = `${import.meta.env.BASE_URL}image/iphone.jpg`;
                       }}
                     />
                   </div>

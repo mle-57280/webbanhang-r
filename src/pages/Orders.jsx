@@ -10,7 +10,7 @@ const Orders = () => {
       id: 'DH001234',
       date: '02/11/2024',
       products: [
-        { name: 'iPhone 15 Pro Max 256GB', quantity: 1, price: '29.990.000₫', image: '/image/iPhone 15 Pro Max 256GB.jpg' }
+        { name: 'iPhone 15 Pro Max 256GB', quantity: 1, price: '29.990.000₫', image: 'image/iPhone 15 Pro Max 256GB.jpg' }
       ],
       total: '29.990.000₫',
       payment: 'Thẻ tín dụng',
@@ -22,8 +22,8 @@ const Orders = () => {
       id: 'DH001235',
       date: '01/11/2024',
       products: [
-        { name: 'Samsung Galaxy S24 Ultra', quantity: 1, price: '27.990.000₫', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' },
-        { name: 'Ốp lưng Samsung', quantity: 1, price: '299.000₫', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' }
+        { name: 'Samsung Galaxy S24 Ultra', quantity: 1, price: '27.990.000₫', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' },
+        { name: 'Ốp lưng Samsung', quantity: 1, price: '299.000₫', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' }
       ],
       total: '28.289.000₫',
       payment: 'Chuyển khoản',
@@ -35,7 +35,7 @@ const Orders = () => {
       id: 'DH001236',
       date: '31/10/2024',
       products: [
-        { name: 'Xiaomi 14 Pro', quantity: 1, price: '16.990.000₫', image: '/image/Xiaomi 14 Pro 256GB.jpg' }
+        { name: 'Xiaomi 14 Pro', quantity: 1, price: '16.990.000₫', image: 'image/Xiaomi 14 Pro 256GB.jpg' }
       ],
       total: '16.990.000₫',
       payment: 'Trả góp 0%',
@@ -47,7 +47,7 @@ const Orders = () => {
       id: 'DH001237',
       date: '28/10/2024',
       products: [
-        { name: 'OPPO Find X7 Ultra', quantity: 1, price: '18.990.000₫', image: '/image/OPPO Find X7 Ultra 256GB.jpg' }
+        { name: 'OPPO Find X7 Ultra', quantity: 1, price: '18.990.000₫', image: 'image/OPPO Find X7 Ultra 256GB.jpg' }
       ],
       total: '18.990.000₫',
       payment: 'Tiền mặt',
@@ -172,7 +172,7 @@ const Orders = () => {
                         {order.products.map((product, index) => (
                           <div key={index} className="flex items-center justify-between py-2 border-b last:border-b-0">
                             <div className="flex items-center space-x-4">
-                              <img src={product.image || '/image/iPhone 15 Pro Max 256GB.jpg'} alt={product.name} className="w-20 h-20 object-contain" />
+                              <img src={product.image ? `${import.meta.env.BASE_URL}${product.image}` : `${import.meta.env.BASE_URL}image/iPhone 15 Pro Max 256GB.jpg`} alt={product.name} className="w-20 h-20 object-contain" />
                               <div>
                                 <p className="font-medium">{product.name}</p>
                                 <p className="text-sm text-gray-600">Số lượng: {product.quantity}</p>

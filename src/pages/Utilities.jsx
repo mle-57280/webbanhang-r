@@ -30,33 +30,33 @@ const Utilities = () => {
     study: {
       title: 'Dành cho học tập',
       products: [
-        { name: 'iPad Air', price: '14.990.000₫', reason: 'Màn hình lớn, pin tốt cho việc học online', image: '/image/Samsung Galaxy A54 5G 128GB.jpg' },
-        { name: 'Samsung Galaxy Tab S9', price: '12.990.000₫', reason: 'Hỗ trợ S-Pen, phù hợp ghi chú', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' },
-        { name: 'iPhone 14', price: '18.990.000₫', reason: 'Hệ sinh thái tốt, camera sắc nét cho học online', image: '/image/iPhone 14 Pro 128GB.jpg' }
+        { name: 'iPad Air', price: '14.990.000₫', reason: 'Màn hình lớn, pin tốt cho việc học online', image: 'image/Samsung Galaxy A54 5G 128GB.jpg' },
+        { name: 'Samsung Galaxy Tab S9', price: '12.990.000₫', reason: 'Hỗ trợ S-Pen, phù hợp ghi chú', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' },
+        { name: 'iPhone 14', price: '18.990.000₫', reason: 'Hệ sinh thái tốt, camera sắc nét cho học online', image: 'image/iPhone 14 Pro 128GB.jpg' }
       ]
     },
     entertainment: {
       title: 'Dành cho giải trí',
       products: [
-        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Màn hình 6.8" AMOLED, loa stereo chất lượng cao', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' },
-        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Chip A17 Pro mạnh mẽ, chơi game mượt mà', image: '/image/iPhone 15 Pro Max 256GB.jpg' },
-        { name: 'OPPO Find X7', price: '18.990.000₫', reason: 'Pin lớn 5000mAh, xem video cả ngày', image: '/image/OPPO Find X7 Ultra 256GB.jpg' }
+        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Màn hình 6.8" AMOLED, loa stereo chất lượng cao', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' },
+        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Chip A17 Pro mạnh mẽ, chơi game mượt mà', image: 'image/iPhone 15 Pro Max 256GB.jpg' },
+        { name: 'OPPO Find X7', price: '18.990.000₫', reason: 'Pin lớn 5000mAh, xem video cả ngày', image: 'image/OPPO Find X7 Ultra 256GB.jpg' }
       ]
     },
     photography: {
       title: 'Dành cho nhiếp ảnh',
       products: [
-        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Camera 48MP, chế độ ProRAW, quay video 4K 60fps', image: '/image/iPhone 15 Pro Max 256GB.jpg' },
-        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Camera 200MP, zoom 100x, AI nâng cao', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' },
-        { name: 'Xiaomi 14 Pro', price: '16.990.000₫', reason: 'Camera Leica, chụp đêm xuất sắc', image: '/image/Xiaomi 14 Pro 256GB.jpg' }
+        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Camera 48MP, chế độ ProRAW, quay video 4K 60fps', image: 'image/iPhone 15 Pro Max 256GB.jpg' },
+        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Camera 200MP, zoom 100x, AI nâng cao', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' },
+        { name: 'Xiaomi 14 Pro', price: '16.990.000₫', reason: 'Camera Leica, chụp đêm xuất sắc', image: 'image/Xiaomi 14 Pro 256GB.jpg' }
       ]
     },
     gaming: {
       title: 'Dành cho gaming',
       products: [
-        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Chip A17 Pro, GPU mạnh nhất, tản nhiệt tốt', image: '/image/iPhone 15 Pro Max 256GB.jpg' },
-        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Snapdragon 8 Gen 3, RAM 12GB, màn hình 120Hz', image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg' },
-        { name: 'ASUS ROG Phone 7', price: '19.990.000₫', reason: 'Chuyên gaming, trigger button, tản nhiệt tốt', image: '/image/OPPO Reno11 Pro 256GB.png' }
+        { name: 'iPhone 15 Pro Max', price: '29.990.000₫', reason: 'Chip A17 Pro, GPU mạnh nhất, tản nhiệt tốt', image: 'image/iPhone 15 Pro Max 256GB.jpg' },
+        { name: 'Samsung Galaxy S24 Ultra', price: '27.990.000₫', reason: 'Snapdragon 8 Gen 3, RAM 12GB, màn hình 120Hz', image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg' },
+        { name: 'ASUS ROG Phone 7', price: '19.990.000₫', reason: 'Chuyên gaming, trigger button, tản nhiệt tốt', image: 'image/OPPO Reno11 Pro 256GB.png' }
       ]
     }
   };
@@ -235,7 +235,7 @@ const Utilities = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {productRecommendations[selectedNeed].products.map((product, index) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-primary-500 transition-colors">
-                    <img src={product.image} alt={product.name} className="w-full h-32 object-contain mb-3" />
+                    <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} className="w-full h-32 object-contain mb-3" />
                     <h4 className="font-semibold mb-2">{product.name}</h4>
                     <p className="text-primary-600 font-bold mb-2">{product.price}</p>
                     <p className="text-sm text-gray-600">{product.reason}</p>

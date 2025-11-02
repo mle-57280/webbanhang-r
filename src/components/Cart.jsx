@@ -45,7 +45,7 @@ const Cart = ({ isOpen, onClose }) => {
               {cart.map((item) => (
                 <div key={item.id} className="border rounded-lg p-3">
                   <div className="flex items-start space-x-3">
-                    <img src={item.image} alt={item.name} className="w-20 h-20 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.name} className="w-20 h-20 object-contain" />
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold text-sm line-clamp-2 mb-1">
                         {item.name}

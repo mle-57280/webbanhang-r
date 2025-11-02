@@ -21,7 +21,7 @@ const News = () => {
       title: 'Đánh giá chi tiết iPhone 15 Pro Max: Chiếc iPhone đáng mua nhất năm 2024',
       excerpt: 'iPhone 15 Pro Max mang đến nhiều cải tiến đáng giá với chip A17 Pro, camera 48MP và thiết kế titanium cao cấp...',
       category: 'review',
-      image: '/image/iPhone 15 Pro Max 256GB.jpg',
+      image: 'image/iPhone 15 Pro Max 256GB.jpg',
       date: '02/11/2024',
       author: 'Nguyễn Văn A',
       readTime: '8 phút đọc',
@@ -32,7 +32,7 @@ const News = () => {
       title: 'Samsung Galaxy S24 Ultra vs iPhone 15 Pro Max: Cuộc chiến flagship 2024',
       excerpt: 'So sánh chi tiết hai siêu phẩm hàng đầu từ Samsung và Apple về thiết kế, hiệu năng, camera và giá cả...',
       category: 'review',
-      image: '/image/Samsung Galaxy S24 Ultra 256GB.jpg',
+      image: 'image/Samsung Galaxy S24 Ultra 256GB.jpg',
       date: '01/11/2024',
       author: 'Trần Thị B',
       readTime: '10 phút đọc',
@@ -43,7 +43,7 @@ const News = () => {
       title: 'Top 5 điện thoại chụp ảnh đẹp nhất hiện nay',
       excerpt: 'Khám phá những chiếc điện thoại có camera xuất sắc nhất trên thị trường, phù hợp cho các nhiếp ảnh gia di động...',
       category: 'review',
-      image: '/image/Xiaomi 14 Pro 256GB.jpg',
+      image: 'image/Xiaomi 14 Pro 256GB.jpg',
       date: '31/10/2024',
       author: 'Lê Văn C',
       readTime: '6 phút đọc',
@@ -54,7 +54,7 @@ const News = () => {
       title: 'Xiaomi 14 Pro: Giá tốt nhưng vẫn đầy sức mạnh',
       excerpt: 'Xiaomi 14 Pro mang đến hiệu năng mạnh mẽ với Snapdragon 8 Gen 3 và camera Leica với mức giá cạnh tranh...',
       category: 'review',
-      image: '/image/Xiaomi 14 Pro 256GB.jpg',
+      image: 'image/Xiaomi 14 Pro 256GB.jpg',
       date: '30/10/2024',
       author: 'Phạm Thị D',
       readTime: '7 phút đọc',
@@ -65,7 +65,7 @@ const News = () => {
       title: 'Xu hướng công nghệ smartphone năm 2024: AI và camera là tâm điểm',
       excerpt: 'Các hãng điện thoại đang tập trung phát triển AI tích hợp và nâng cấp hệ thống camera để cạnh tranh...',
       category: 'news',
-      image: '/image/OPPO Find X7 Ultra 256GB.jpg',
+      image: 'image/OPPO Find X7 Ultra 256GB.jpg',
       date: '29/10/2024',
       author: 'Hoàng Văn E',
       readTime: '5 phút đọc',
@@ -76,7 +76,7 @@ const News = () => {
       title: 'Hướng dẫn chọn điện thoại phù hợp với nhu cầu sử dụng',
       excerpt: 'Tìm hiểu cách chọn điện thoại dựa trên mục đích sử dụng: công việc, giải trí, gaming hay nhiếp ảnh...',
       category: 'guide',
-      image: '/image/Samsung Galaxy A54 5G 128GB.jpg',
+      image: 'image/Samsung Galaxy A54 5G 128GB.jpg',
       date: '28/10/2024',
       author: 'Nguyễn Thị F',
       readTime: '9 phút đọc',
@@ -87,7 +87,7 @@ const News = () => {
       title: '10 mẹo sử dụng iPhone hiệu quả hơn mà ít người biết',
       excerpt: 'Khám phá những tính năng ẩn và mẹo hữu ích giúp bạn khai thác tối đa khả năng của iPhone...',
       category: 'guide',
-      image: '/image/iPhone 13 128GB.jpg',
+      image: 'image/iPhone 13 128GB.jpg',
       date: '27/10/2024',
       author: 'Trần Văn G',
       readTime: '8 phút đọc',
@@ -98,7 +98,7 @@ const News = () => {
       title: 'Chương trình giảm giá lớn nhất năm: Black Friday 2024',
       excerpt: 'Chuẩn bị cho ngày mua sắm lớn nhất năm với các ưu đãi giảm giá lên đến 50% cho điện thoại và phụ kiện...',
       category: 'promotion',
-      image: '/image/Head.png',
+      image: 'image/Head.png',
       date: '26/10/2024',
       author: 'MobileZone',
       readTime: '3 phút đọc',
@@ -109,7 +109,7 @@ const News = () => {
       title: 'Cách bảo vệ pin điện thoại để sử dụng lâu dài',
       excerpt: 'Những thói quen sạc pin đúng cách và mẹo bảo quản giúp kéo dài tuổi thọ pin điện thoại của bạn...',
       category: 'guide',
-      image: '/image/Realme 11 Pro+ 256GB.jpg',
+      image: 'image/Realme 11 Pro+ 256GB.jpg',
       date: '25/10/2024',
       author: 'Lê Thị H',
       readTime: '6 phút đọc',
@@ -157,7 +157,7 @@ const News = () => {
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 p-12 flex items-center justify-center">
-              <img src={featuredArticle.image} alt={featuredArticle.title} className="w-full h-80 object-contain" />
+              <img src={`${import.meta.env.BASE_URL}${featuredArticle.image}`} alt={featuredArticle.title} className="w-full h-80 object-contain" />
             </div>
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <div className="inline-block px-3 py-1 bg-red-100 text-red-600 text-xs font-semibold rounded-full mb-4 w-fit">
@@ -210,7 +210,7 @@ const News = () => {
           {filteredArticles.map((article) => (
             <article key={article.id} className="card group cursor-pointer">
               <div className="bg-gradient-to-br from-primary-400 to-primary-600 p-8 flex items-center justify-center">
-                <img src={article.image} alt={article.title} className="w-full h-48 object-contain" />
+                <img src={`${import.meta.env.BASE_URL}${article.image}`} alt={article.title} className="w-full h-48 object-contain" />
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">

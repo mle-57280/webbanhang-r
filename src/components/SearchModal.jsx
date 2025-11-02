@@ -73,7 +73,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                     onClick={() => handleProductClick(product)}
                     className="flex items-center space-x-4 p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors"
                   >
-                    <img src={product.image} alt={product.name} className="w-16 h-16 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} className="w-16 h-16 object-contain" />
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold line-clamp-1">{product.name}</h3>
                       <p className="text-sm text-gray-600">{product.brand}</p>

@@ -163,7 +163,7 @@ const ProductCompare = () => {
                   product ? (
                     <th key={index} className="px-4 py-3 border-b">
                       <div className="text-center">
-                        <img src={product.image} alt={product.name} className="w-32 h-32 object-contain mx-auto mb-2" />
+                        <img src={`${import.meta.env.BASE_URL}${product.image}`} alt={product.name} className="w-32 h-32 object-contain mx-auto mb-2" />
                         <div className="font-semibold text-sm">{product.name}</div>
                         <div className="text-primary-600 font-bold mt-1">
                           {formatPrice(product.price)}

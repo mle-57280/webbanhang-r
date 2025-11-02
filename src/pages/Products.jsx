@@ -198,12 +198,12 @@ const Products = () => {
               >
                 <div className="relative p-6 bg-gray-50">
                   <img 
-                    src={product.image} 
+                    src={`${import.meta.env.BASE_URL}${product.image}`} 
                     alt={product.name} 
                     className="w-full h-48 object-contain mb-4"
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = '/image/iphone.jpg';
+                      e.target.src = `${import.meta.env.BASE_URL}image/iphone.jpg`;
                     }}
                   />
                   {product.badge && (
@@ -304,7 +304,7 @@ const Products = () => {
                         className="w-full h-96 object-contain"
                         onError={(e) => {
                           e.target.onerror = null;
-                          e.target.src = '/image/iphone.jpg';
+                          e.target.src = `${import.meta.env.BASE_URL}image/iphone.jpg`;
                         }}
                       />
                     </div>
