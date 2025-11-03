@@ -65,31 +65,45 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={`${import.meta.env.BASE_URL}image/Head.png`} alt="MobileZone Banner" className="w-full h-full object-cover" />
-        </div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Chào mừng đến với MobileZone
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-100">
-              Cửa hàng trực tuyến cung cấp điện thoại chính hãng cùng các dịch vụ hỗ trợ đầy đủ. 
-              Website mang đến trải nghiệm mua sắm thuận tiện, minh bạch và an toàn cho khách hàng toàn quốc.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/products" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-                Khám Phá Ngay
-              </Link>
-              <Link to="/about" className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white">
-                Tìm Hiểu Thêm
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* ✅ Hero Section (same height as homepage) */}
+<section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-r from-primary-600 to-primary-800 text-white overflow-hidden">
+  {/* Ảnh nền */}
+  <div className="absolute inset-0 opacity-30">
+    <img
+      src={`${import.meta.env.BASE_URL}image/Head.png`}
+      alt="MobileZone Banner"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Nội dung hero */}
+  <div className="container-custom relative z-10 text-center px-4">
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+      Về MobileZone
+    </h1>
+    <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
+      Đối tác tin cậy trong hành trình công nghệ của bạn
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-4">
+      <Link
+        to="/products"
+        className="btn-primary bg-white text-primary-600 hover:bg-gray-100 transition-all duration-300"
+      >
+        Khám Phá Ngay
+      </Link>
+      <Link
+        to="/about"
+        className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white transition-all duration-300"
+      >
+        Tìm Hiểu Thêm
+      </Link>
+    </div>
+  </div>
+
+  {/* Hiệu ứng gradient overlay nếu muốn rõ chữ hơn */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</section>
 
       {/* Features Section */}
       <section className="py-16 bg-white">
