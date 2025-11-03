@@ -26,7 +26,7 @@ const About = () => {
         {/* Ảnh nền mờ */}
         <div className="absolute inset-0 opacity-20">
           <img
-            src={`${import.meta.env.BASE_URL}image/Phones_display.jpg.png`}
+            src={`${import.meta.env.BASE_URL}image/Phones_display.jpg`}
             alt="MobileZone Banner"
             className="w-full h-full object-cover"
           />
