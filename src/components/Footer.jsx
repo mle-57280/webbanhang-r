@@ -63,11 +63,6 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Hỗ Trợ Khách Hàng</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/utilities" className="hover:text-primary-400 transition-colors text-sm">
-                  Kiểm Tra IMEI
-                </Link>
-              </li>
-              <li>
                 <Link to="/orders" className="hover:text-primary-400 transition-colors text-sm">
                   Tra Cứu Đơn Hàng
                 </Link>
@@ -109,7 +104,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2024 MobileZone. Tất cả quyền được bảo lưu.</p>
+          <p>&copy; 2025 MobileZone. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>

@@ -3,28 +3,7 @@ import { Search, Shield, Lightbulb, BookOpen, CheckCircle, AlertCircle, Smartpho
 import ProductCompare from '../components/ProductCompare';
 
 const Utilities = () => {
-  const [imei, setImei] = useState('');
-  const [imeiResult, setImeiResult] = useState(null);
   const [selectedNeed, setSelectedNeed] = useState('');
-
-  const handleCheckIMEI = () => {
-    if (imei.length === 15) {
-      // Simulate IMEI check
-      setImeiResult({
-        valid: true,
-        brand: 'Apple',
-        model: 'iPhone 15 Pro Max',
-        warranty: 'Còn 340 ngày bảo hành',
-        status: 'Chính hãng',
-        activationDate: '25/01/2024'
-      });
-    } else {
-      setImeiResult({
-        valid: false,
-        message: 'Mã IMEI không hợp lệ. Vui lòng kiểm tra lại.'
-      });
-    }
-  };
 
   const productRecommendations = {
     study: {
@@ -109,83 +88,6 @@ const Utilities = () => {
           <h1 className="section-title">Tiện Ích</h1>
           <p className="text-gray-600">Công cụ hỗ trợ mua sắm và sử dụng điện thoại</p>
         </div>
-
-        {/* IMEI Checker */}
-        <section className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <div className="flex items-center mb-6">
-            <Shield className="h-8 w-8 text-primary-600 mr-3" />
-            <div>
-              <h2 className="text-2xl font-bold">Kiểm Tra IMEI</h2>
-              <p className="text-gray-600">Xác minh chính hãng và thời gian bảo hành</p>
-            </div>
-          </div>
-
-          <div className="max-w-2xl">
-            <div className="flex gap-3 mb-4">
-              <input
-                type="text"
-                placeholder="Nhập mã IMEI (15 số)"
-                value={imei}
-                onChange={(e) => setImei(e.target.value.replace(/\D/g, '').slice(0, 15))}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              />
-              <button 
-                onClick={handleCheckIMEI}
-                className="btn-primary flex items-center"
-              >
-                <Search className="h-5 w-5 mr-2" />
-                Kiểm tra
-              </button>
-            </div>
-
-            <p className="text-sm text-gray-500 mb-4">
-              Cách tìm IMEI: Gọi *#06# hoặc vào Cài đặt {'>'} Về điện thoại
-            </p>
-
-            {imeiResult && (
-              <div className={`p-6 rounded-lg border-2 ${imeiResult.valid ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'}`}>
-                {imeiResult.valid ? (
-                  <>
-                    <div className="flex items-center mb-4">
-                      <CheckCircle className="h-6 w-6 text-green-600 mr-2" />
-                      <h3 className="text-lg font-semibold text-green-800">IMEI hợp lệ - Sản phẩm chính hãng</h3>
-                    </div>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Thương hiệu:</span>
-                        <span className="font-semibold">{imeiResult.brand}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Mẫu máy:</span>
-                        <span className="font-semibold">{imeiResult.model}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Trạng thái:</span>
-                        <span className="font-semibold text-green-600">{imeiResult.status}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Ngày kích hoạt:</span>
-                        <span className="font-semibold">{imeiResult.activationDate}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Bảo hành:</span>
-                        <span className="font-semibold text-primary-600">{imeiResult.warranty}</span>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex items-center mb-2">
-                      <AlertCircle className="h-6 w-6 text-red-600 mr-2" />
-                      <h3 className="text-lg font-semibold text-red-800">Lỗi kiểm tra</h3>
-                    </div>
-                    <p className="text-red-700">{imeiResult.message}</p>
-                  </>
-                )}
-              </div>
-            )}
-          </div>
-        </section>
 
         {/* Product Comparison */}
         <section className="bg-white rounded-lg shadow-md p-8 mb-8">
