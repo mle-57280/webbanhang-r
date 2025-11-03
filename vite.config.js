@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/web_banhang/' : '/', // Base path cho GitHub Pages khi production
+  // base: '/', // For local development
+  base: '/web.banhang/', // For GitHub Pages deployment
   server: {
     port: 3000,
     open: true
