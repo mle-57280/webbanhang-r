@@ -40,14 +40,6 @@ const About = () => {
           <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
             Đối tác tin cậy trong hành trình công nghệ của bạn 
           </p>
-          <div className="flex flex-wrap gap-4">
-                        <Link to="/products" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-                          Khám Phá Ngay
-                        </Link>
-                        <Link to="/about" className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white">
-                          Tìm Hiểu Thêm
-                        </Link>
-                      </div>
         </div>
       </section>
 
