@@ -20,11 +20,20 @@ const About = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Về MobileZone</h1>
-          <p className="text-xl max-w-3xl mx-auto text-primary-100">
+      {/* ✅ Hero Section*/}
+      <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src={`${import.meta.env.BASE_URL}image/Head.png`}
+            alt="MobileZone Banner"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container-custom relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Về MobileZone
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
             Đối tác tin cậy trong hành trình công nghệ của bạn
           </p>
         </div>
