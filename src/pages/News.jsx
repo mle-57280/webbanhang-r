@@ -216,7 +216,7 @@ const News = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredArticles.map((article) => (
             <article key={article.id} className="card group cursor-pointer"
-              onClick={() => navigate(`/news/${article.id}`)}>>
+              onClick={() => navigate(`/news/${article.id}`)}>
               <div className="bg-gradient-to-br from-primary-400 to-primary-600 p-8 flex items-center justify-center">
                 <img src={`${import.meta.env.BASE_URL}${article.image}`} alt={article.title} className="w-full h-48 object-contain" />
               </div>
