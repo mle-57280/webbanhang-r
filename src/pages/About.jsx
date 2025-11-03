@@ -20,8 +20,9 @@ const About = () => {
 
   return (
     <div>
-      {/* ✅ Hero Section */}
+      {/* ✅ Hero Section (đã chỉnh lại cho giống Home) */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        {/* Ảnh nền mờ */}
         <div className="absolute inset-0 opacity-20">
           <img
             src={`${import.meta.env.BASE_URL}image/Head.png`}
@@ -39,13 +40,13 @@ const About = () => {
             Đối tác tin cậy trong hành trình công nghệ của bạn 
           </p>
           <div className="flex flex-wrap gap-4">
-              <Link to="/products" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-                    Khám Phá Ngay
-              </Link>
-              <Link to="/about" className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white">
-                 Tìm Hiểu Thêm
-             </Link>
-          </div>
+                        <Link to="/products" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+                          Khám Phá Ngay
+                        </Link>
+                        <Link to="/about" className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white">
+                          Tìm Hiểu Thêm
+                        </Link>
+                      </div>
         </div>
       </section>
 
