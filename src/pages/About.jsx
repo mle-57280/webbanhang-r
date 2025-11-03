@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Users, Award, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const commitments = [
