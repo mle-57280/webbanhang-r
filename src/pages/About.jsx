@@ -20,8 +20,9 @@ const About = () => {
 
   return (
     <div>
-      {/* ✅ Hero Section*/}
+      {/* ✅ Hero Section (đã chỉnh lại cho giống Home) */}
       <section className="relative bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        {/* Ảnh nền mờ */}
         <div className="absolute inset-0 opacity-20">
           <img
             src={`${import.meta.env.BASE_URL}image/Head.png`}
@@ -29,15 +30,32 @@ const About = () => {
             className="w-full h-full object-cover"
           />
         </div>
+
+        {/* Nội dung hero */}
         <div className="container-custom relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Về MobileZone
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
-            Đối tác tin cậy trong hành trình công nghệ của bạn
+            Đối tác tin cậy trong hành trình công nghệ của bạn 
           </p>
+          <div className="flex justify-center gap-4">
+            <a
+              href="/products"
+              className="btn-primary bg-white text-primary-600 hover:bg-gray-100"
+            >
+              Khám Phá Sản Phẩm
+            </a>
+            <a
+              href="/contact"
+              className="btn-secondary bg-primary-700 hover:bg-primary-600 text-white"
+            >
+              Liên Hệ Ngay
+            </a>
+          </div>
         </div>
       </section>
+
 
       {/* Company Introduction */}
       <section className="py-16 bg-white">
